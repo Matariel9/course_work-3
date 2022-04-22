@@ -35,3 +35,9 @@ def get_posts_by_pk(pk,data):
     for i in range(len(data)):
         if(data[i]['pk'] == pk):
             return data[i]
+
+def length(data):
+    if len(data)>10:
+        return 10
+    else:
+        return len(data)

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYPROGRAM post</title>
   <link href="../static/css/styles.min.css" rel="stylesheet">
+  <link href="../static/css/styles.min.css.map" rel="stylesheet">
 </head>
 
 <body>
@@ -29,16 +30,16 @@
         <div class="item__top">
           <a href="/user-feed.html" class="item__head">
             <div class="item__ava-wrap">
-              <img src="img/ava1.png" alt="" class="item__ava" width="47">
+              <img src="{{ data['poster_avatar'] }}" alt="" class="item__ava" width="47">
             </div>
-            <span class="item__username">{{data['poster_name']}}</span>
+            <span class="item__username">{{ data['poster_name'] }}</span>
           </a>
           <button type="button" class="item__bookmark-btn">
-            <img src="img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
+            <img src="../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
         </div>
         <a href="" class="item__post-link">
-          <img src="img/post1.jpg" alt="" width="348" class="item__post-img">
+          <img src="{{ data['pic'] }}" alt="" width="348" class="item__post-img">
         </a>
         <div class="item__descr">
           <p class="item__text">
@@ -47,16 +48,16 @@
         </div>
         <div class="item__bottom">
           <div class="item__post-info">
-            <p class="item__comments-counter"{{commRange}}} комментария</p>
+            <p class="item__comments-counter">{{commRange}} комментария</p>
             <div class="item__counter">
               <img src="../static/img/eye.png" alt="" class="item__counter-icon" width="26">
-              <span class="item__counter-text">1023</span>
+              <span class="item__counter-text">{{data['views_count']}}</span>
             </div>
           </div>
           <div class="item__comments">
             {% for i in range(commRange)%}
             <p class="item__comment">
-              <b>{{comments[i]["commenter_name"]}}  {{ comments[i]['comment'] }}</b>
+              <b>{{ comments[i]["commenter_name"] }}  {{ comments[i]['comment'] }}</b>
             </p>
             {% endfor %}
           </div>

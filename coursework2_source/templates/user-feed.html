@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYPROGRAM user feed</title>
   <link href="../static/css/styles.min.css" rel="stylesheet">
+  <link href="../static/css/styles.min.css.map" rel="stylesheet">
 </head>
 
 <body>
@@ -36,19 +37,19 @@
           </a>
         </div>
         <a href="/post.html" class="item__post-link">
-          <img src="img/post5.jpg" alt="" width="348" class="item__post-img">
+          <img src="{{data[i]['pic']}}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr"><a href="#" class="item__tag">#food</a><br>{{data[i]['content'][0:33]}}...</p>
         <div class="item__post-info">
           <div class="item__counter">
-            <img src="img/eye.png" alt="" class="item__counter-icon" width="26">
+            <img src="../static/img/eye.png" alt="" class="item__counter-icon" width="26">
             <span class="item__counter-text">{{ data[i]['views_count'] }}👁  {{ data[i]['likes_count'] }}♥</span>
           </div>
         </div>
         <div class="item__post-bottom">
           <a href="/post.html" class="item__btn-more">Подробнее</a>
           <button type="button" class="item__bookmark-btn">
-            <img src="img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
+            <img src="../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
         </div>
       </div>

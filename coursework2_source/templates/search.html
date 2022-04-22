@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYPROGRAM search</title>
   <link href="../static/css/styles.min.css" rel="stylesheet">
+  <link href="../static/css/styles.min.css.map" rel="stylesheet">
 </head>
 
 <body>
@@ -37,25 +38,25 @@
         <div class="item__top">
           <a href="/user-feed.html" class="item__head">
             <div class="item__ava-wrap">
-              <img src="{{found[i]['poster_avatar']}}" alt="" class="item__ava" width="47">
+              <img src="{{ found[i]['poster_avatar'] }}" alt="" class="item__ava" width="47">
             </div>
-            <span class="item__username">{{found[i]['poster_name']}}</span>
+            <span class="item__username">{{ found[i]['poster_name'] }}</span>
           </a>
         </div>
         <a href="/post.html" class="item__post-link">
-          <img src="img/post5.jpg" alt="" width="348" class="item__post-img">
+          <img src="{{ found[i]['pic'] }}" alt="" width="348" class="item__post-img">
         </a>
-        <p class="item__descr"><a href="/tag.html" class="item__tag">#food</a> {{found[i]['content']}}</p>
+        <p class="item__descr"><a href="/tag.html" class="item__tag">#food</a> {{ found[i]['content'] }}</p>
         <div class="item__post-info">
           <div class="item__counter">
-            <img src="img/eye.png" alt="" class="item__counter-icon" width="26">
+            <img src="../static/img/eye.png" alt="" class="item__counter-icon" width="26">
             <span class="item__counter-text">212</span>
           </div>
         </div>
         <div class="item__post-bottom">
           <a href="/post.html" class="item__btn-more">Подробнее</a>
           <button type="button" class="item__bookmark-btn">
-            <img src="img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
+            <img src="../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
         </div>
       </div>
